@@ -25,11 +25,7 @@ button {
     }
 }
 
-.startButton {
-    margin-left: 45vw;
-    margin-right: 45vw;
-    margin-top: 50px;
-}
+
 
 .App {
     background-color: #2f2f2f;
@@ -39,26 +35,53 @@ button {
     overflow: hidden;
 }
 
-#turns {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    width: 90px;
-    height: 40px;
-    border: 1px solid #F9FF45;
-    border-radius: 10px;
-    text-align: center;
-}
 
-#level {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    width: 90px;
-    height: 60px;
-    border: 1px solid #F9FF45;
-    border-radius: 10px;
-    text-align: center;
+.header {
+    display: flex;
+    flex-direction: column;
+
+    .text_blocks {
+        #turns {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            width: 90px;
+            height: 40px;
+            border: 1px solid #F9FF45;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #level {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            width: 90px;
+            height: 60px;
+            border: 1px solid #F9FF45;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+    }
+
+
+    .hide_element {
+        visibility: hidden;
+
+    }
+
+
+    h3 {
+        text-align: center;
+        margin-top: 40px
+    }
+
+    .startButton {
+        margin-left: 45vw;
+        margin-right: 45vw;
+        margin-top: 40px;
+    }
 }
 
 @import 'cards';

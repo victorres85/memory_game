@@ -50,6 +50,7 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
   const [level, setLevel] = useState(2)
   const [openClosingModal, setOpenClosingModal] = useState(false)
+  const [levelDisplay, setLevelDisplay] = useState(false)
 
 
 
@@ -62,7 +63,7 @@ function App() {
     const cardsShuffled = [...images_sliced, ...images_sliced]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
-
+    setLevel(2)
     setCollectionOfCards(cardsShuffled)
     setOpenCards(0)
     setCardOne(null)
@@ -70,6 +71,7 @@ function App() {
     setOpenCards(0)
     setTurns(0)
     setLevel(2)
+    setLevelDisplay(true)
 
   })
 
@@ -154,7 +156,15 @@ function App() {
 
       </header>
       <section>
-        <button className='startButton' onClick={cardsShuffle}>Start</button>
+        <div className='header'>
+          <div className='text_blocks'>
+            <p className={`${!levelDisplay && 'hide_element'} `} id='level'>You are on level number {level === 0 ? level - 2 : 1}</p>
+            <p className={`${!levelDisplay && 'hide_element'} `} id='turns'>Number of trials {turns}</p>
+
+          </div>
+          <h3 className={`${levelDisplay && 'hide_element'} `}>Let's see if you have a good memory!</h3 >
+          <button className='startButton' onClick={cardsShuffle}>Start</button>
+        </div>
         <div className='card-frame'>
           <div className='card-grid'>
             {collectionOfCards.map((card) => (
@@ -170,8 +180,7 @@ function App() {
             ))}
           </div>
         </div>
-        <p id='turns'>Number of trials {turns}</p>
-        <p id='level'>You are on level number {level === 0 ? level-2: 1 }</p>
+
 
         < div >
           {openModal && < Modal
