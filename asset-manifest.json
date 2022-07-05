@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/memory_game/static/css/main.8bb07de5.css",
+    "main.js": "/memory_game/static/js/main.1aba5277.js",
+    "static/js/787.69b12325.chunk.js": "/memory_game/static/js/787.69b12325.chunk.js",
+    "static/media/AlienRick.jpeg": "/memory_game/static/media/AlienRick.2d6b79fa871ed41ace58.jpeg",
+    "static/media/AlienMorty.jpeg": "/memory_game/static/media/AlienMorty.e599c9500291d0607944.jpeg",
+    "static/media/AntsJonson.jpeg": "/memory_game/static/media/AntsJonson.050feff3cd16049c10e1.jpeg",
+    "static/media/ricky.jpeg": "/memory_game/static/media/ricky.d0b683fd501349bc8e90.jpeg",
+    "static/media/AgencyDirector.jpeg": "/memory_game/static/media/AgencyDirector.ffe1a911edae8546e65d.jpeg",
+    "static/media/Adjudicator.jpeg": "/memory_game/static/media/Adjudicator.1d7ac0fdfc1ab4d5b741.jpeg",
+    "static/media/Abadango.jpeg": "/memory_game/static/media/Abadango.25a4aaaa46ea6cbf7fe4.jpeg",
+    "static/media/Alexander.jpeg": "/memory_game/static/media/Alexander.32f25b9f69b779cf2062.jpeg",
+    "static/media/Jerry.jpeg": "/memory_game/static/media/Jerry.1469464754af379c1ded.jpeg",
+    "static/media/abradolf.jpeg": "/memory_game/static/media/abradolf.66a77fd19ced61cead08.jpeg",
+    "static/media/Annie.jpeg": "/memory_game/static/media/Annie.cfc7a2359a6b52160b15.jpeg",
+    "static/media/Albert.jpeg": "/memory_game/static/media/Albert.965619b3d97ef9e49e1e.jpeg",
+    "static/media/Alan.jpeg": "/memory_game/static/media/Alan.73078476ddf189ffbe70.jpeg",
+    "static/media/summer.jpeg": "/memory_game/static/media/summer.5f30b239eb1e3f0c824b.jpeg",
+    "static/media/Beth.jpeg": "/memory_game/static/media/Beth.9707919ba8ee9b31c20f.jpeg",
+    "static/media/morty.jpeg": "/memory_game/static/media/morty.628bb860dcd865b7101d.jpeg",
+    "static/media/javascript.svg": "/memory_game/static/media/javascript.625b807e382d78f5e28258182b3234a7.svg",
+    "index.html": "/memory_game/index.html",
+    "main.8bb07de5.css.map": "/memory_game/static/css/main.8bb07de5.css.map",
+    "main.1aba5277.js.map": "/memory_game/static/js/main.1aba5277.js.map",
+    "787.69b12325.chunk.js.map": "/memory_game/static/js/787.69b12325.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8bb07de5.css",
+    "static/js/main.1aba5277.js"
+  ]
+}
