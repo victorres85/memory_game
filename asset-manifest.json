@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/memory_game/static/css/main.8bb07de5.css",
-    "main.js": "/memory_game/static/js/main.1aba5277.js",
+    "main.css": "/memory_game/static/css/main.da2ce9cc.css",
+    "main.js": "/memory_game/static/js/main.940ed084.js",
     "static/js/787.69b12325.chunk.js": "/memory_game/static/js/787.69b12325.chunk.js",
     "static/media/AlienRick.jpeg": "/memory_game/static/media/AlienRick.2d6b79fa871ed41ace58.jpeg",
     "static/media/AlienMorty.jpeg": "/memory_game/static/media/AlienMorty.e599c9500291d0607944.jpeg",
@@ -21,12 +21,12 @@
     "static/media/morty.jpeg": "/memory_game/static/media/morty.628bb860dcd865b7101d.jpeg",
     "static/media/javascript.svg": "/memory_game/static/media/javascript.625b807e382d78f5e28258182b3234a7.svg",
     "index.html": "/memory_game/index.html",
-    "main.8bb07de5.css.map": "/memory_game/static/css/main.8bb07de5.css.map",
-    "main.1aba5277.js.map": "/memory_game/static/js/main.1aba5277.js.map",
+    "main.da2ce9cc.css.map": "/memory_game/static/css/main.da2ce9cc.css.map",
+    "main.940ed084.js.map": "/memory_game/static/js/main.940ed084.js.map",
     "787.69b12325.chunk.js.map": "/memory_game/static/js/787.69b12325.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bb07de5.css",
-    "static/js/main.1aba5277.js"
+    "static/css/main.da2ce9cc.css",
+    "static/js/main.940ed084.js"
   ]
 }
