@@ -38,11 +38,28 @@ button:focus {
   position: absolute;
   top: 20px;
   right: 30px;
-  width: 50px;
-  height: 20px;
-  border: 1px solid #f2f2f2;
+  width: 90px;
+  height: 40px;
+  border: 1px solid #F9FF45;
   border-radius: 10px;
   text-align: center;
+}
+
+#level {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 90px;
+  height: 60px;
+  border: 1px solid #F9FF45;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-frame {
+  width: 80vw;
+  justify-content: center;
+  margin-left: 10vw;
 }
 
 .card-grid {
@@ -50,11 +67,14 @@ button:focus {
   list-style-type: none;
   grid-gap: 15px 20px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 200px) 100px;
-  margin: 2rem auto;
+  grid-template-rows: repeat(3, 100px) 100px;
+  margin: 2rem 2rem 2rem 2rem;
   max-width: 100vw;
   width: 80vw;
   height: 100vh;
+}
+.card-grid .card:hover {
+  animation-name: shake 1.5s;
 }
 .card-grid .cards {
   width: 100px;
@@ -62,12 +82,20 @@ button:focus {
   position: relative;
   overflow: hidden;
 }
+.card-grid .cards:hover {
+  animation-name: shake 0.5s;
+}
 .card-grid img {
   width: 100%;
   height: auto;
   display: block;
   cursor: pointer;
   border-radius: 5px;
+  justify-self: center;
+}
+.card-grid img:hover {
+  animation-name: shake;
+  animation-duration: 0.7s;
 }
 .card-grid .card-front {
   transform: rotateY(90deg);
@@ -101,6 +129,29 @@ button:focus {
   }
   100% {
     visibility: visible;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 #modal-container {

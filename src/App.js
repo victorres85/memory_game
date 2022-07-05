@@ -18,7 +18,7 @@ import morty from "../src/img/morty.jpeg";
 import ricky from "../src/img/ricky.jpeg";
 import summer from "../src/img/summer.jpeg";
 import Modal from './components/modal'
-
+import ClosingModal from './components/closingModal'
 
 const images = [
   { src: Abadango, matched: false, name: 'Abadango' },
@@ -48,12 +48,15 @@ function App() {
   const [clickable, setClickable] = useState(false);
   const [openCards, setOpenCards] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  const [level, setLevel] = useState(1)
+  const [level, setLevel] = useState(2)
+  const [openClosingModal, setOpenClosingModal] = useState(false)
+
 
 
 
 
   const cardsShuffle = (() => {
+    // setOpenOpeningModal(true)
     console.log(`Level on cardsShuffle is ${level}`)
     const images_sliced = images.slice(0, level)
     const cardsShuffled = [...images_sliced, ...images_sliced]
@@ -66,6 +69,7 @@ function App() {
     setCardTwo(null)
     setOpenCards(0)
     setTurns(0)
+    setLevel(2)
 
   })
 
@@ -74,20 +78,24 @@ function App() {
   }
 
   function levelUp() {
-    const newLevel = level + 1
-    setLevel(newLevel)
-    console.log(`Level on cardsShuffle is ${newLevel}`)
-    const images_sliced = images.slice(0, newLevel)
-    const cardsShuffled = [...images_sliced, ...images_sliced]
-      .sort(() => Math.random() - 0.5)
-      .map((card) => ({ ...card, id: Math.random() }))
+    const newLevel = level + 2
+    if (newLevel <= 4) {
+      setLevel(newLevel)
+      console.log(`Level on cardsShuffle is ${newLevel}`)
+      const images_sliced = images.slice(0, newLevel)
+      const cardsShuffled = [...images_sliced, ...images_sliced]
+        .sort(() => Math.random() - 0.5)
+        .map((card) => ({ ...card, id: Math.random() }))
 
-    setCollectionOfCards(cardsShuffled)
-    setOpenCards(0)
-    setCardOne(null)
-    setCardTwo(null)
-    setOpenCards(0)
-    setTurns(0)
+      setCollectionOfCards(cardsShuffled)
+      setOpenCards(0)
+      setCardOne(null)
+      setCardTwo(null)
+      setOpenCards(0)
+      setTurns(0)
+    } else {
+      setOpenClosingModal(true)
+    }
   }
 
 
@@ -139,6 +147,7 @@ function App() {
     console.log()
   }
 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -146,26 +155,38 @@ function App() {
       </header>
       <section>
         <button className='startButton' onClick={cardsShuffle}>Start</button>
-        <div className='card-grid'>
-          {collectionOfCards.map((card) => (
-            <div className='card'>
-              <MemoryCards
-                key={card.id}
-                card={card}
-                selectCard={selectCard}
-                turn={card === cardOne || card === cardTwo || card.matched}
-                clickable={clickable}
-              />
-            </div>
-          ))}
+        <div className='card-frame'>
+          <div className='card-grid'>
+            {collectionOfCards.map((card) => (
+              <div className='card'>
+                <MemoryCards
+                  key={card.id}
+                  card={card}
+                  selectCard={selectCard}
+                  turn={card === cardOne || card === cardTwo || card.matched}
+                  clickable={clickable}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        <p id='turns'>{turns}</p>
+        <p id='turns'>Number of trials {turns}</p>
+        <p id='level'>You are on level number {level === 0 ? level-2: 1 }</p>
+
         < div >
           {openModal && < Modal
             closeModal={setOpenModal}
             turns={turns}
             level={level}
             levelUp={levelUp} />}
+        </div >
+        < div >
+          {openClosingModal && < ClosingModal
+            closeClosingModal={setOpenClosingModal}
+          // newName={nameChangeHandler}
+          // name={name}
+          // onSubmit={onSubmit}
+          />}
         </div >
       </section >
 
@@ -175,10 +196,3 @@ function App() {
 
 export default App;
 
-
-
-// if (!collectionOfCards.includes(true)) {
-//   console.log('All the cards have been opened')
-// } else {
-//   iniciateTurn()
-// }

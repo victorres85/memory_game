@@ -24,7 +24,8 @@ button {
 
     }
 }
-.startButton{
+
+.startButton {
     margin-left: 45vw;
     margin-right: 45vw;
     margin-top: 50px;
@@ -42,9 +43,20 @@ button {
     position: absolute;
     top: 20px;
     right: 30px;
-    width: 50px;
-    height: 20px;
-    border: 1px solid #f2f2f2;
+    width: 90px;
+    height: 40px;
+    border: 1px solid #F9FF45;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#level {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 90px;
+    height: 60px;
+    border: 1px solid #F9FF45;
     border-radius: 10px;
     text-align: center;
 }

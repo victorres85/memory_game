@@ -1,4 +1,5 @@
 function Modal({ closeModal, turns, level, levelUp }) {
+    
     const changeLevel = (() => {
         levelUp(level)
         console.log(level)
