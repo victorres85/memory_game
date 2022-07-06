@@ -1,6 +1,8 @@
 
 
-import back_image from '../img/javascript.svg';
+// import back_image from 'https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825630i21e1.png';
+
+let back_image = 'https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825630i21e1.png'
 
 const MemoryCards = ({ card, selectCard, turn, clickable, level }) => {
 

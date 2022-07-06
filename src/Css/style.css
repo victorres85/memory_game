@@ -101,6 +101,8 @@ button:focus {
   cursor: pointer;
   border-radius: 5px;
   justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
 }
 .card-grid img:hover {
   animation-name: shake;
@@ -200,13 +202,14 @@ button:focus {
   justify-content: space-around;
   color: #eff37e;
 }
+#modal-container .modal .modal-content {
+  -webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s alternate backwards;
+  animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s alternate backwards;
+}
 #modal-container .message {
   width: 100%;
   text-align: center;
   line-height: 40px;
-  visibility: visible;
-  animation-delay: 1.2s;
-  animation-name: modalContent;
 }
 #modal-container .buttons {
   display: flex;
@@ -247,6 +250,9 @@ button:focus {
 }
 @keyframes modalContent {
   0% {
+    visibility: hidden;
+  }
+  50% {
     visibility: hidden;
   }
   100% {

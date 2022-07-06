@@ -1,42 +1,22 @@
 import MemoryCards from './components/memory.js';
 import { useEffect, useState } from 'react';
 import './Css/style.css';
-import Abadango from "../src/img/Abadango.jpeg";
-import abradolf from "../src/img/abradolf.jpeg";
-import Adjudicator from "../src/img/Adjudicator.jpeg";
-import Director from "../src/img/AgencyDirector.jpeg";
-import Alan from "../src/img/Alan.jpeg";
-import Albert from "../src/img/Albert.jpeg";
-import Alexander from "../src/img/Alexander.jpeg";
-import AlienMorty from "../src/img/AlienMorty.jpeg";
-import AlienRick from "../src/img/AlienRick.jpeg";
-import Annie from "../src/img/Annie.jpeg";
-import AntsJonson from "../src/img/AntsJonson.jpeg";
-import Beth from "../src/img/Beth.jpeg";
-import Jerry from "../src/img/Jerry.jpeg";
-import morty from "../src/img/morty.jpeg";
-import ricky from "../src/img/ricky.jpeg";
-import summer from "../src/img/summer.jpeg";
+
 import Modal from './components/modal'
 import ClosingModal from './components/closingModal'
 
 const images = [
-  { src: Abadango, matched: false, name: 'Abadango' },
-  { src: abradolf, matched: false, name: 'abradolf' },
-  { src: Adjudicator, matched: false, name: 'Adjudicator' },
-  { src: Director, matched: false, name: 'Director' },
-  { src: Alan, matched: false, name: 'Alan' },
-  { src: Albert, matched: false, name: 'Albert' },
-  { src: Alexander, matched: false, name: 'Alexander' },
-  { src: AlienMorty, matched: false, name: 'AlienMorty' },
-  { src: AlienRick, matched: false, name: 'AlienRick' },
-  { src: Annie, matched: false, name: 'Annie' },
-  { src: AntsJonson, matched: false, name: 'AntsJonson' },
-  { src: Beth, matched: false, name: 'Beth' },
-  { src: Jerry, matched: false, name: 'Jerry' },
-  { src: morty, matched: false, name: 'morty' },
-  { src: ricky, matched: false, name: 'ricky' },
-  { src: summer, matched: false, name: 'summer' },
+  { src: 'https://tse4.mm.bing.net/th?id=OIP.0djO5vYuLrvZ2dxxszlszgAAAA&pid=Api&P=0&w=173&h=173', matched: false, name: 'Abadango' },
+  { src: 'https://www.freepnglogos.com/uploads/pokemon-png/pokemon-png-image-famous-anime-character-png-only-39.png', matched: false, name: 'abradolf' },
+  { src: 'https://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786750sbinm.png', matched: false, name: 'Adjudicator' },
+  { src: 'https://purepng.com/public/uploads/thumbnail//purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786917wifb3.png', matched: false, name: 'Director' },
+  { src: 'https://purepng.com/public/uploads/thumbnail//purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527785672couwq.png', matched: false, name: 'Alan' },
+  { src: 'https://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527784345v3cml.png', matched: false, name: 'Albert' },
+  { src: 'https://purepng.com/public/uploads/thumbnail//purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786867gzp7j.png', matched: false, name: 'Alexander' },
+  { src: 'https://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786833pqvld.png', matched: false, name: 'AlienMorty' },
+  { src: 'https://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786742tsjsu.png', matched: false, name: 'AlienRick' },
+  { src: 'https://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786781bpocq.png', matched: false, name: 'Annie' },
+
 ];
 
 
@@ -81,7 +61,7 @@ function App() {
 
   function levelUp() {
     const newLevel = level + 2
-    if (newLevel <= 4) {
+    if (newLevel <= 8) {
       setLevel(newLevel)
       console.log(`Level on cardsShuffle is ${newLevel}`)
       const images_sliced = images.slice(0, newLevel)
@@ -97,6 +77,8 @@ function App() {
       setTurns(0)
     } else {
       setOpenClosingModal(true)
+      setLevelDisplay(false)
+
     }
   }
 
@@ -158,7 +140,7 @@ function App() {
       <section>
         <div className='header'>
           <div className='text_blocks'>
-            <p className={`${!levelDisplay && 'hide_element'} `} id='level'>You are on level number {level === 0 ? level - 2 : 1}</p>
+            <p className={`${!levelDisplay && 'hide_element'} `} id='level'>You are on level number {level-1}</p>
             <p className={`${!levelDisplay && 'hide_element'} `} id='turns'>Number of trials {turns}</p>
 
           </div>
