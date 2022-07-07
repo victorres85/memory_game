@@ -15,7 +15,7 @@ const MemoryCards = ({ card, selectCard, turn, clickable, level }) => {
 
     return (
         <div className='cards'>
-            <div className={` ${turn ? 'turn' : ''}`}>
+            <div className={`cardSize ${turn ? 'turn' : ''}`}>
                 <div>
                     <img className='card-front' src={card.src} alt="card front"></img>
                 </div>

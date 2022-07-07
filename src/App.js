@@ -37,20 +37,20 @@ function App() {
 
 
   const cardsShuffle = (() => {
+    setLevel(2)
     // setOpenOpeningModal(true)
     console.log(`Level on cardsShuffle is ${level}`)
     const images_sliced = images.slice(0, level)
     const cardsShuffled = [...images_sliced, ...images_sliced]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
-    setLevel(2)
+
     setCollectionOfCards(cardsShuffled)
     setOpenCards(0)
     setCardOne(null)
     setCardTwo(null)
     setOpenCards(0)
     setTurns(0)
-    setLevel(2)
     setLevelDisplay(true)
 
   })
@@ -140,7 +140,7 @@ function App() {
       <section>
         <div className='header'>
           <div className='text_blocks'>
-            <p className={`${!levelDisplay && 'hide_element'} `} id='level'>You are on level number {level-1}</p>
+            <p className={`${!levelDisplay && 'hide_element'} `} id='level'>You are on level number {level - 1}</p>
             <p className={`${!levelDisplay && 'hide_element'} `} id='turns'>Number of trials {turns}</p>
 
           </div>

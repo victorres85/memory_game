@@ -27,39 +27,40 @@
         color: #eff37e;
 
         .modal-content {
-
-            -webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.2s alternate backwards;
-            animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.2s alternate backwards;
-
+            -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.2s both;
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.2s both;
         }
-    }
 
 
-
-    .message {
-        width: 100%;
-        text-align: center;
-        line-height: 40px;
-
-
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        #yes {
-            width: 70px;
-            height: 30px;
-            border: 1px solid #F9FF45;
-        }
     }
 }
 
+
+
+.message {
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    #yes {
+        width: 70px;
+        height: 30px;
+        border: 1px solid #F9FF45;
+    }
+}
+
+
 @keyframes openModal {
     0% {
-        visibility: hidden;
+        visibility: visible;
         margin-top: 40%;
         margin-left: 50%;
         width: 1px;
@@ -98,5 +99,36 @@
 
     100% {
         visibility: visible;
+    }
+}
+
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

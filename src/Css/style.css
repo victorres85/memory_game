@@ -26,6 +26,7 @@ button:focus {
   align-items: center;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .header {
@@ -80,7 +81,7 @@ button:focus {
   margin: 2rem 2rem 2rem 2rem;
   max-width: 100vw;
   width: 80vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 .card-grid .card:hover {
   animation-name: shake 1.5s;
@@ -166,12 +167,33 @@ button:focus {
   }
 }
 @media (max-width: 400px) {
+  .card-frame {
+    width: 85vw;
+    justify-content: center;
+    margin-left: 0vw;
+  }
+
   .card-grid {
+    width: 80vw;
     display: grid;
     list-style-type: none;
-    grid-gap: 15px 20px;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    grid-gap: 4vw 4vw;
+    margin-left: 10vw;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 100px) 100px;
+  }
+
+  .cards {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75px;
+    max-width: 75px;
+  }
+
+  .cardSize {
+    width: 75px;
+    height: 75px;
   }
 }
 #modal-container {
@@ -203,20 +225,22 @@ button:focus {
   color: #eff37e;
 }
 #modal-container .modal .modal-content {
-  -webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s alternate backwards;
-  animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s alternate backwards;
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s both;
 }
-#modal-container .message {
+
+.message {
   width: 100%;
   text-align: center;
   line-height: 40px;
 }
-#modal-container .buttons {
+
+.buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-#modal-container .buttons #yes {
+.buttons #yes {
   width: 70px;
   height: 30px;
   border: 1px solid #F9FF45;
@@ -224,7 +248,7 @@ button:focus {
 
 @keyframes openModal {
   0% {
-    visibility: hidden;
+    visibility: visible;
     margin-top: 40%;
     margin-left: 50%;
     width: 1px;
@@ -257,5 +281,29 @@ button:focus {
   }
   100% {
     visibility: visible;
+  }
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
   }
 }
